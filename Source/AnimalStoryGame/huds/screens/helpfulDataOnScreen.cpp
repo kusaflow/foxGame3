@@ -6,6 +6,7 @@
 #include "Components/ProgressBar.h"
 #include "../../characters/mainChar_Fox.h"
 #include "Kismet/GameplayStatics.h"
+#include <Animation/WidgetAnimation.h>
 
 UhelpfulDataOnScreen::UhelpfulDataOnScreen(const FObjectInitializer& objectInit) : Super(objectInit)
 {
@@ -34,23 +35,16 @@ void UhelpfulDataOnScreen :: Visibility_Primary(bool setV) {
 }
 
 
-void UhelpfulDataOnScreen::Visibility_Secondary(bool setV) {
+void UhelpfulDataOnScreen::Visibility_InputHelpText(bool setV) {
 	if (setV)
-		SecondaryHelpText->SetVisibility(ESlateVisibility::Visible);
+		InputHelpText->SetVisibility(ESlateVisibility::Visible);
 	else
-		SecondaryHelpText->SetVisibility(ESlateVisibility::Hidden);
+		InputHelpText->SetVisibility(ESlateVisibility::Hidden);
 }
 
-void UhelpfulDataOnScreen::Visibility_InstructHelper(bool setV) {
-	if (setV)
-		InstructHelper->SetVisibility(ESlateVisibility::Visible);
-	else
-		InstructHelper->SetVisibility(ESlateVisibility::Hidden);
-
-}
 
 void UhelpfulDataOnScreen::Visibility_interact_progressBar(bool setV) {
-	UE_LOG(LogTemp, Warning, TEXT("ss----------------------------------------------"));
+	//UE_LOG(LogTemp, Warning, TEXT("ss----------------------------------------------"));
 	if (setV)
 		interact_progressBar->SetVisibility(ESlateVisibility::Visible);
 	else
@@ -65,10 +59,6 @@ void UhelpfulDataOnScreen::SetText_Primary(FText msg) {
 	PrimaryHelpText->SetText(msg);
 }
 
-void UhelpfulDataOnScreen::SetText_Secondary(FText msg) {
-	SecondaryHelpText->SetText(msg);
-}
-
-void UhelpfulDataOnScreen::SetText_InstructHelper(FText msg) {
-	InstructHelper->SetText(msg);
+void UhelpfulDataOnScreen::SetText_InputHelpText(FText msg) {
+	InputHelpText->SetText(msg);
 }

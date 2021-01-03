@@ -13,28 +13,7 @@ As1_lvlGuide::As1_lvlGuide()
 
 	currIdx = 1;
 
-	totalCheckPoints = 4;
-
-	locations = new FVector[totalCheckPoints];
-	rotation = new FRotator[totalCheckPoints];
-	Box_Bounds = new FVector[totalCheckPoints];
-
-	locations[0] = FVector(0, -913, 530);
-	rotation[0] = FRotator(0);
-	Box_Bounds[0] = FVector(365,78,425);
-
-	locations[1] = FVector(-8726, -3700, 500);
-	rotation[1] = FRotator(0, -70, 0);
-	Box_Bounds[1] = FVector(2095, 77, 1084);
-
-	locations[2] = FVector(-15590.0, -12190.0, -270.0);
-	rotation[2] = FRotator(0, -70, 0);
-	Box_Bounds[2] = FVector(365, 78, 425);
-
-	locations[3] = FVector(-18120.0, -22610.0, 2440.0);
-	rotation[3] = FRotator(0, -70, 0);
-	Box_Bounds[3] = FVector(365, 78, 425);
-
+	totalCheckPoints = 0;
 
 }
 
@@ -47,6 +26,8 @@ void As1_lvlGuide::BeginPlay()
 
 	
 	currIdx=1;
+	totalCheckPoints = locations.Num();
+
 	if (currIdx <= totalCheckPoints) {
 		FActorSpawnParameters spawnPara;
 		spawnPara.Owner = this;

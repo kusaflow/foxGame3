@@ -28,10 +28,7 @@ public:
 		void helper_Visibility_Primary(bool setV);
 
 	UFUNCTION(BlueprintCallable)
-		void helper_Visibility_Secondary(bool setV);
-
-	UFUNCTION(BlueprintCallable)
-		void helper_Visibility_InstructHelper(bool setV);
+		void helper_Visibility_InputHelpText(bool setV);
 
 	UFUNCTION(BlueprintCallable)
 		void helper_Visibility_interact_progressBar(bool setV);
@@ -41,10 +38,7 @@ public:
 		void helper_SetText_Primary(FText msg);
 
 	UFUNCTION(BlueprintCallable)
-		void helper_SetText_Secondary(FText msg);
-
-	UFUNCTION(BlueprintCallable)
-		void helper_SetText_InstructHelper(FText msg);
+		void helper_SetText_InputHelpText(FText msg);
 
 private:
 

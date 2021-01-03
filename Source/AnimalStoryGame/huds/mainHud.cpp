@@ -40,25 +40,19 @@ void AmainHud::DrawHUD() {
 
 //visiblity===========================
 void AmainHud::helper_Visibility_Primary(bool setV) {
-	UE_LOG(LogTemp, Warning, TEXT("ss----------------------------------------------"));
+	//UE_LOG(LogTemp, Warning, TEXT("ss----------------------------------------------"));
 	if (UI_helper) {
 		UI_helper->Visibility_Primary(setV);
 	}
 }
 
 
-void AmainHud::helper_Visibility_Secondary(bool setV) {
+void AmainHud::helper_Visibility_InputHelpText(bool setV) {
 	if (UI_helper) {
-		UI_helper->Visibility_Secondary(setV);
+		UI_helper->Visibility_InputHelpText(setV);
 	}
 }
 
-void AmainHud::helper_Visibility_InstructHelper(bool setV) {
-	if (UI_helper) {
-		UI_helper->Visibility_InstructHelper(setV);
-	}
-
-}
 
 void AmainHud::helper_Visibility_interact_progressBar(bool setV) {
 	if (UI_helper) {
@@ -75,14 +69,8 @@ void AmainHud::helper_SetText_Primary(FText msg) {
 	}
 }
 
-void AmainHud::helper_SetText_Secondary(FText msg) {
+void AmainHud::helper_SetText_InputHelpText(FText msg) {
 	if (UI_helper) {
-		UI_helper->SetText_Secondary(msg);
-	}
-}
-
-void AmainHud::helper_SetText_InstructHelper(FText msg) {
-	if (UI_helper) {
-		UI_helper->SetText_InstructHelper(msg);
+		UI_helper->SetText_InputHelpText(msg);
 	}
 }

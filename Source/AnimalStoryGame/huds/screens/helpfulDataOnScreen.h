@@ -24,11 +24,8 @@ public:
 	void Visibility_Primary(bool setV);
 	
 	UFUNCTION(BlueprintCallable)
-	void Visibility_Secondary(bool setV);
+	void Visibility_InputHelpText(bool setV);
 	
-	UFUNCTION(BlueprintCallable)
-	void Visibility_InstructHelper(bool setV);
-
 	UFUNCTION(BlueprintCallable)
 	void Visibility_interact_progressBar(bool setV);
 	//================================================
@@ -36,25 +33,21 @@ public:
 	void SetText_Primary(FText msg);
 
 	UFUNCTION(BlueprintCallable)
-	void SetText_Secondary(FText msg);
-	
-	UFUNCTION(BlueprintCallable)
-	void SetText_InstructHelper(FText msg);
+	void SetText_InputHelpText(FText msg);
 	
 private:
 
 public:
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
-	class UTextBlock* InstructHelper;
+	class UTextBlock* PrimaryHelpText;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
-		class UTextBlock* PrimaryHelpText;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
-		class UTextBlock* SecondaryHelpText;
-
+	class UTextBlock* InputHelpText;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 	class UProgressBar* interact_progressBar;
 	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidgetAnim))
+	UWidgetAnimation* testAn;
 };

@@ -18,9 +18,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "kusaVar")
 	TSubclassOf<class AGuideActor> GuideActor;
 
-	FVector* locations;
-	FRotator* rotation; 
-	FVector* Box_Bounds;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "kusa")
+	TArray<FVector> locations;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "kusa")
+	TArray<FRotator> rotation;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "kusa")
+	TArray<FVector> Box_Bounds;
+	
 	int totalCheckPoints;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "kusa")
