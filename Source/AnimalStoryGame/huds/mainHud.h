@@ -40,6 +40,12 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void helper_SetText_InputHelpText(FText msg);
 
+	//Animation=====================
+	//========HelperClass----------------------
+	UFUNCTION(BlueprintCallable, Category = "kusaAnim")
+	void anim_helperText(bool DoShow);
+
+
 private:
 
 public:

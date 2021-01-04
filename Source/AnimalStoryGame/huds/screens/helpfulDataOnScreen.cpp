@@ -62,3 +62,12 @@ void UhelpfulDataOnScreen::SetText_Primary(FText msg) {
 void UhelpfulDataOnScreen::SetText_InputHelpText(FText msg) {
 	InputHelpText->SetText(msg);
 }
+
+void UhelpfulDataOnScreen::Anim_PrimHelp(bool DoShow) {
+	if (DoShow) {
+		PlayAnimation(anim_PrimaryHelper_show);
+	}
+	else {
+		PlayAnimation(anim_PrimaryHelper_Hide);
+	}
+}

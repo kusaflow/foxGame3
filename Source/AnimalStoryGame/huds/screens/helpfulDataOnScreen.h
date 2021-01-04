@@ -20,21 +20,29 @@ public:
 
 	void Update_Interact_progressBar();
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "kusaText")
 	void Visibility_Primary(bool setV);
 	
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "kusaText")
 	void Visibility_InputHelpText(bool setV);
 	
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "kusaText")
 	void Visibility_interact_progressBar(bool setV);
 	//================================================
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "kusaText")
 	void SetText_Primary(FText msg);
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "kusaText")
 	void SetText_InputHelpText(FText msg);
+
 	
+	// animations
+	//---Helper Text
+	UFUNCTION(BlueprintCallable, Category = "kusaAnim")
+	void Anim_PrimHelp(bool DoShow);
+
+
+
 private:
 
 public:
@@ -49,5 +57,10 @@ public:
 	class UProgressBar* interact_progressBar;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidgetAnim))
-	UWidgetAnimation* testAn;
+	UWidgetAnimation* anim_PrimaryHelper_show;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidgetAnim))
+	UWidgetAnimation* anim_PrimaryHelper_Hide;
+
+
 };

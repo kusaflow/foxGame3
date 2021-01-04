@@ -14,9 +14,13 @@ void ANPC_wolf_Grd::BeginPlay()
 	walkVelocity = 150;
 	RunVelocity = 1150;
 
+	//attackingMinDistance
+	attackMinDis = 800;
+
 	//AI Perception Sense Update
 	AI_detectionSpeed = 700;
 	AI_Un_detectionSpeed_fast = 1000;
 	AI_Un_detectionSpeed_Slow = 100;
+
 
 }

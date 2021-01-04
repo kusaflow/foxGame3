@@ -24,6 +24,9 @@ EBTNodeResult::Type Utask_GetLocToPatrol :: ExecuteTask(class UBehaviorTreeCompo
 
 	int arraySize = baseAi->pathPoint.Num();
 
+	if (arraySize == 0)
+		return EBTNodeResult::Aborted;
+
 	int idx = bb->GetValueAsInt("idx_LocToMove");
 	idx++;
 	idx %= arraySize;

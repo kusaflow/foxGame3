@@ -74,3 +74,11 @@ void AmainHud::helper_SetText_InputHelpText(FText msg) {
 		UI_helper->SetText_InputHelpText(msg);
 	}
 }
+
+
+void AmainHud::anim_helperText(bool DoShow) {
+	if (UI_helper) {
+		UI_helper->Anim_PrimHelp(DoShow);
+	}
+}
+

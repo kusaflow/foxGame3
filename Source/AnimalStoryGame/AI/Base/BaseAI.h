@@ -30,6 +30,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "movement")
 	float RunVelocity =  0;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "combat")
+	float attackMinDis = 300;
+
 
 	//blackboard
 	class UBlackboardComponent* bb;
