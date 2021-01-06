@@ -28,7 +28,7 @@ public:
 	class UAIPerceptionStimuliSourceComponent* Ai_percep_stim;
 	//-------==============
 
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "kusaVar_Health_Stamina")
 	bool bisDead = false;
 
 
@@ -119,6 +119,14 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "kusaVar_Enemy")
 	FVector Enemy_Location;
+
+	//---------Health And Stamina==================================
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "kusaVar_Health_Stamina")
+		float Health;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "kusaVar_Health_Stamina")
+		float Stamina;
+
 
 
 protected:

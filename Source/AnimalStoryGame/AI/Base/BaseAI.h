@@ -33,6 +33,12 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "combat")
 	float attackMinDis = 300;
 
+	//Animation
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "kusaAnim")
+	int AnimState = 0;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "kusaVar")
+	float HitScale = 0;
 
 	//blackboard
 	class UBlackboardComponent* bb;

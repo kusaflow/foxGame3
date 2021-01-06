@@ -13,5 +13,24 @@ UCLASS()
 class ANIMALSTORYGAME_API UWolf_Gaurd : public UAnimInstance
 {
 	GENERATED_BODY()
+public:
+
+	UFUNCTION(BlueprintCallable, Category = "AnimProperty")
+		void update();
+
+	UFUNCTION(BlueprintCallable, Category = "AnimProperty")
+		void AnimNotif_ResetAnimState();
+
+	UFUNCTION(BlueprintCallable, Category = "AnimProperty")
+		void AnimNotif_AttackAnimSt();
+
+
+	//==============Variable================
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "kusaVar")
+		int AnimState;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "kusaVar")
+		float velX;
 	
 };

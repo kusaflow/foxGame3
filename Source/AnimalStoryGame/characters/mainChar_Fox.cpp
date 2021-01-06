@@ -40,7 +40,7 @@ AmainChar_Fox::AmainChar_Fox()
 	//Ai==============================
 	Ai_percep_stim = CreateDefaultSubobject<UAIPerceptionStimuliSourceComponent>(TEXT("AI_Perception_Stimuli"));
 
-
+	Health = 500;
 }
 
 // Called when the game starts or when spawned
@@ -69,6 +69,16 @@ void AmainChar_Fox::Tick(float DeltaTime)
 	}
 	else if (GetCharacterMovement()->MaxWalkSpeed > VelShouldBe) {
 		GetCharacterMovement()->MaxWalkSpeed -= 800 * DeltaTime;
+	}
+
+	//CheckFor Death
+	if (Health <= 0) {
+		if (bisDead == false) {
+			cameraBoom->TargetArmLength = 400;
+			GetMesh()->SetSimulatePhysics(true);
+			//cameraBoom->SetRelativeRotation(FRotator(90,0,0));
+		}
+		bisDead = true;
 	}
 
 	
@@ -120,7 +130,9 @@ void AmainChar_Fox::Tick(float DeltaTime)
 	//Dead Animation For CameraBoom
 	if (bisDead) {
 		cameraBoom->TargetArmLength += 500* DeltaTime;
-		
+		//disableInput_camera = true;
+		disableInput_interact = true;
+		disableInput_movement = true;
 	}
 
 	//zoom in or not
