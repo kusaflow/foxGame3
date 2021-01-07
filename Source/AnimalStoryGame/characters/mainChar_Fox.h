@@ -42,6 +42,9 @@ public:
 	float StandCrouch = 0;
 
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "kusaVar", meta = (AllowPrivateAccess = "true"))
+	float RegularCameraTargetLength = 800;
+
 	bool bCanLookAround = false;
 
 	bool bIsMovingForward = true , bIsMoving = false;

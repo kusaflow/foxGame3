@@ -144,13 +144,14 @@ void AmainChar_Fox::Tick(float DeltaTime)
 			//cameraBoom->bDoCollisionTest = false;
 		}
 		else {
-			if (cameraBoom->TargetArmLength > 800)
+			if (cameraBoom->TargetArmLength > RegularCameraTargetLength)
 				cameraBoom->TargetArmLength -= 500 * DeltaTime;
 			//cameraBoom->TargetArmLength = 800;
 			//cameraBoom->ProbeChannel = ECollisionChannel::ECC_WorldStatic;
 			//cameraBoom->bDoCollisionTest = true;
 		}
 	}
+
 
 		
 	
