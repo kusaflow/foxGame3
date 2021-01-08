@@ -28,10 +28,15 @@ void UhelpfulDataOnScreen :: Update_Interact_progressBar() {
 }
 
 void UhelpfulDataOnScreen :: Visibility_Primary(bool setV) {
-	if (setV)
+	if (setV) {
 		PrimaryHelpText->SetVisibility(ESlateVisibility::Visible);
-	else
+		PlayAnimation(anim_PrimaryHelper_show);
+	}
+	else {
 		PrimaryHelpText->SetVisibility(ESlateVisibility::Hidden);
+		PlayAnimation(anim_PrimaryHelper_Hide);
+	}
+	
 }
 
 
