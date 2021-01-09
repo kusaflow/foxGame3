@@ -15,8 +15,19 @@ class ANIMALSTORYGAME_API UeneryMeters : public UUserWidget
 	GENERATED_BODY()
 
 public :
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
-		class UProgressBar* Energy;
+	UeneryMeters(const FObjectInitializer& objectInit);
 
+	virtual void NativeConstruct() override;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
+		class UProgressBar* EnergyBar;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
+		class UProgressBar* HealthBar;
+
+	float Curr_Energy;
+
+
+public:
+	 void update(float dt);
 	
 };

@@ -42,4 +42,11 @@ public:
 		bool bDoZoomOut = false;
 
 
+	//---------------Energy-===============
+	UPROPERTY(BlueprintReadWrite, Category = "kusaVar")
+		float HealthLimit = 500;
+
+	UPROPERTY(BlueprintReadWrite, Category = "kusaVar")
+		float EnergyLimit = 500;
+
 };

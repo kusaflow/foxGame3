@@ -55,5 +55,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "kusa_UIs")
 	class UhelpfulDataOnScreen* UI_helper;
 	
+	///energy Meter========================
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "kusa_UIs")
+		TSubclassOf<class UUserWidget> energy_subClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "kusa_UIs")
+		class UeneryMeters* UI_energyMeter;
+
 	
 };

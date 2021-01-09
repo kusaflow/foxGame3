@@ -128,7 +128,7 @@ public:
 		float Health;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "kusaVar_Health_Stamina")
-		float Stamina;
+		float Energy;
 
 
 

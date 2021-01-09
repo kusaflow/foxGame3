@@ -41,7 +41,7 @@ void ANPC_wolf_Grd :: OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, 
 	AmainChar_Fox* fox = Cast<AmainChar_Fox>(OtherActor);
 
 	if (fox) {
-		fox->Health -= 1* HitScale;
+		fox->Health = FMath::Clamp(fox->Health - 1* HitScale, 0.0f, 500.0f);
 	}
 
 }

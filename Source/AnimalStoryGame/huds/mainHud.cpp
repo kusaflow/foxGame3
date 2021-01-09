@@ -21,6 +21,14 @@ void AmainHud::BeginPlay() {
 		UI_helper->AddToViewport();
 	}
 	
+	//energy Meter
+	if (energy_subClass) {
+		UI_energyMeter = CreateWidget<UeneryMeters>(GetWorld(), energy_subClass);
+	}
+
+	if (UI_energyMeter) {
+		UI_energyMeter->AddToViewport();
+	}
 }
 
 void AmainHud::Tick(float Delta) {
@@ -30,6 +38,12 @@ void AmainHud::Tick(float Delta) {
 	if (UI_helper) {
 		UI_helper->Update_Interact_progressBar();
 	}
+
+	if (UI_energyMeter) {
+		UI_energyMeter->update(Delta);
+	}
+
+
 
 }
 
@@ -46,13 +60,11 @@ void AmainHud::helper_Visibility_Primary(bool setV) {
 	}
 }
 
-
 void AmainHud::helper_Visibility_InputHelpText(bool setV) {
 	if (UI_helper) {
 		UI_helper->Visibility_InputHelpText(setV);
 	}
 }
-
 
 void AmainHud::helper_Visibility_interact_progressBar(bool setV) {
 	if (UI_helper) {
@@ -60,8 +72,6 @@ void AmainHud::helper_Visibility_interact_progressBar(bool setV) {
 	}
 
 }
-
-
 //set Text--------------------------------------------------------------------------
 void AmainHud::helper_SetText_Primary(FText msg) {
 	if (UI_helper) {
@@ -75,10 +85,20 @@ void AmainHud::helper_SetText_InputHelpText(FText msg) {
 	}
 }
 
-
 void AmainHud::anim_helperText(bool DoShow) {
 	if (UI_helper) {
 		UI_helper->Anim_PrimHelp(DoShow);
 	}
 }
+
+
+//============================================================================
+//============================================================================
+//=============================================================================
+//EnergyMeter==================================================================
+//============================================================================
+//============================================================================
+
+
+
 
